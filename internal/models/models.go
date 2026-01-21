@@ -11,15 +11,18 @@ const (
 )
 
 type TickerData struct {
-	Venue   Venue
-	Bid     float64
-	Ask     float64
-	BidSize float64
-	AskSize float64
+	Venue     Venue
+	Bid       float64
+	Ask       float64
+	BidSize   float64
+	AskSize   float64
+	Seq       int64
+	Timestamp time.Time
 }
 
 type Snapshot struct {
 	A    TickerData
 	B    TickerData
 	Time time.Time
+	Seq  int64
 }
